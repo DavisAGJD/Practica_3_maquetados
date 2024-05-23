@@ -6,7 +6,7 @@ let marker;
 let autocomplete;
 
 
-
+//funciones del mapa
 function initMap () {
     map = new google.maps.Map(mapDiv, {
         center: merCoords, 
@@ -23,10 +23,32 @@ function initMap () {
 function initAutocomplete(){
     autocomplete = new google.maps.places.Autocomplete(input)
     autocomplete.addListener('place_changed', function (){
-        const place = autocomplete.getplace();
-        console.log(place)
+        const place = autocomplete.getPlace();
+        if (!place.geometry || !place.geometry.location) {
+            console.log("Ubicación no válida");
+            return;
+        }
         map.setCenter(place.geometry.location);
-        map.setPosition(place.geometry.location)
+        map.setPosition(place.geometry.location);
+        map.setZoom(15);
     })
-        
+}
+
+
+//funciones de guardar datos
+function guardarInformacion() {
+    var fecha = document.getElementById("fecha").value;
+    var nombre = document.getElementsByName("username")[0].value;
+    var direccion = document.getElementsByName("direccion")[0].value;
+
+    console.log("Fecha: " + fecha);
+    console.log("Nombre: " + nombre);
+    console.log("Dirección: " + direccion);
+
+    var mensajeRegistro = document.getElementById("mensajeRegistro");
+    mensajeRegistro.style.display = "block";
+
+    setTimeout(function() {
+        mensajeRegistro.style.display = "none";
+    }, 3000); 
 }

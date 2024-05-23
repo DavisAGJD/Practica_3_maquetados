@@ -8,36 +8,45 @@
     <link rel="stylesheet" href="estilos_2.css">
 </head>
 <body>
-    
-    
     <header>
         <h1>Aquí puedes registrar la dirección que desees</h1>
         <p>Llene aquí los siguientes datos para registrar tu dirección</p>
     </header>
 
     <main>
-    <div class="container">
-        <div class="formulario">
-            <h2>Insertar fecha</h2>
-            <form action="/submit-date" method="post">
-                <label for="fecha">Selecciona una fecha: </label>
-                <input type="date" name="fecha" id="fecha" required>
-            </form>
+        <div class="container">
+            <div class="formulario">
+                <h2>Insertar fecha</h2>
+                <form id="fechaform" action="/submit-date" method="post">
+                    <label for="fecha">Selecciona una fecha: </label>
+                    <input type="date" name="fecha" id="fecha" required>
+                </form>
+    
+                <h2>Nombres y Apellidos</h2>
+                
+                <form id="nombreform">
+                    <label for="nombres">Nombre completo:</label>
+                    <input type="text" name="username" placeholder="Nombre completo">
+                </form>
+    
+                
+                <h2>Dirección</h2>
+                <form id="direccionform">
+                    <label for="place_input">Dirección:</label>
+                    <textarea id="place_input" name="direccion" placeholder="Escribe tu dirección aquí" required></textarea>
+                </form>
 
-            <h2>Dirección</h2>
-            <form id="direccionform">
-                <label for="direccion">Dirección:</label>
-                <textarea id="direccion" name="direccion" placeholder="Escribe tu dirección aquí" required></textarea>
-                <input type="submit" value="Registrar dirección">
-            </form>
+                <button class="button" id="guardarDatos" onclick="guardarInformacion()">Guardar Información</button>
+                <div id="mensajeRegistro" style="display: none;">¡Registro exitoso!</div>
+            </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div id="map">
-            <input class="input" type="text" id="place_input" placeholder="Ingresa una ubicación..."> 
+        <div class="container">
+            <div id="map">
+            </div>
         </div>
-    </div>
+
+        
     </main>
     <script src="script.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries=places&callback=initMap"></script>
