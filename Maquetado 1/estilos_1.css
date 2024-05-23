@@ -17,6 +17,7 @@ header, footer {
     color: white;
     box-sizing: border-box;
     border: 5px solid black; /* Naranja */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 main {
@@ -45,23 +46,16 @@ main {
     padding: 10px;
     border: 10px solid #E67E22;
     border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 img {
     width: 100%;
     height: 100%; /* Mantiene la proporción de la imagen */
     object-fit: cover; /* Mantiene la proporción de la imagen dentro del contenedor */
-
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.data {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100vw; /* Ajusta el ancho restando el espacio ocupado por la imagen y el margen */
-    box-sizing: border-box;
-    padding: 10px;
-}
 
 .data {
     width: 100%;
@@ -81,6 +75,7 @@ img {
     padding: 10px;
     border: 5px solid black;
     border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .experiencia-laboral, .educacion-formacion, .capacidades-y-aptitudes-personales {
@@ -100,6 +95,7 @@ img {
     box-sizing: border-box;
     border: 5px solid black;
     border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .ca-ap-pe {
@@ -110,6 +106,7 @@ img {
     box-sizing: border-box;
     border: 5px solid black;
     border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .lengua-materna, .otros-idiomas, .capacidades-y-aptitudes-tecnica, .permiso-de-conduccion {
@@ -130,4 +127,5 @@ img {
     box-sizing: border-box;
     border: 5px solid black;
     border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }

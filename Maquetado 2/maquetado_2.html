@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de dirección</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos_2.css">
+</head>
+<body>
+    
+    
+    <header>
+        <h1>Aquí puedes registrar la dirección que desees</h1>
+        <p>Llene aquí los siguientes datos para registrar tu dirección</p>
+    </header>
+
+    <main>
+    <div class="container">
+        <div class="formulario">
+            <h2>Insertar fecha</h2>
+            <form action="/submit-date" method="post">
+                <label for="fecha">Selecciona una fecha: </label>
+                <input type="date" name="fecha" id="fecha" required>
+            </form>
+
+            <h2>Dirección</h2>
+            <form id="direccionform">
+                <label for="direccion">Dirección:</label>
+                <textarea id="direccion" name="direccion" placeholder="Escribe tu dirección aquí" required></textarea>
+                <input type="submit" value="Registrar dirección">
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="map">
+            <input class="input" type="text" id="place_input" placeholder="Ingresa una ubicación..."> 
+        </div>
+    </div>
+    </main>
+    <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries=places&callback=initMap"></script>
+</body>
+</html>
