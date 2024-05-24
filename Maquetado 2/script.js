@@ -1,41 +1,39 @@
-const merCoords = { lat: 20.96709, lng: -89.62371}
+const merCoords = { lat: 20.96709, lng: -89.62371 };
 const mapDiv = document.getElementById("map");
-const input = document.getElementById("place_input")
+const input = document.getElementById("place-input");
 let map;
 let marker;
 let autocomplete;
 
-
-//funciones del mapa
-function initMap () {
+// Funciones del mapa
+function initMap() {
     map = new google.maps.Map(mapDiv, {
-        center: merCoords, 
+        center: merCoords,
         zoom: 12,
     });
 
-    marker= new google.maps.Marker({
+    marker = new google.maps.Marker({
         position: merCoords,
-        map: map, 
-    })
+        map: map,
+    });
     initAutocomplete();
 }
 
-function initAutocomplete(){
-    autocomplete = new google.maps.places.Autocomplete(input)
-    autocomplete.addListener('place_changed', function (){
+function initAutocomplete() {
+    autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.addListener('place_changed', function() {
         const place = autocomplete.getPlace();
         if (!place.geometry || !place.geometry.location) {
             console.log("Ubicación no válida");
             return;
         }
         map.setCenter(place.geometry.location);
-        map.setPosition(place.geometry.location);
+        marker.setPosition(place.geometry.location);
         map.setZoom(15);
-    })
+    });
 }
 
-
-//funciones de guardar datos
+// Funciones de guardar datos
 function guardarInformacion() {
     var fecha = document.getElementById("fecha").value;
     var nombre = document.getElementsByName("username")[0].value;
@@ -45,7 +43,7 @@ function guardarInformacion() {
     console.log("Nombre: " + nombre);
     console.log("Dirección: " + direccion);
 
-    var mensajeRegistro = document.getElementById("mensajeRegistro");
+    var mensajeRegistro = document.getElementById("mensajeregistro");
     mensajeRegistro.style.display = "block";
 
     setTimeout(function() {

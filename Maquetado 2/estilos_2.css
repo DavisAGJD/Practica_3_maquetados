@@ -68,7 +68,6 @@ main {
 }
 
 .formulario input[type="date"],
-.formulario textarea,
 .formulario input[type="text"] {
     width: 100%;
     padding: 12px;
@@ -125,7 +124,7 @@ main {
     background: #2ecc71; 
 }
 
-#mensajeRegistro {
+#mensajeregistro {
     width: 100%;
     padding: 12px;
     background: #27ae60; 
@@ -141,6 +140,6 @@ main {
     box-sizing: border-box;
 }
 
-#mensajeRegistro:hover {
+#mensajeregistro:hover {
     background: #2ecc71; 
 }

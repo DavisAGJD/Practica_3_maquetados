@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <h1>Aquí puedes registrar la dirección que desees</h1>
-        <p>Llene aquí los siguientes datos para registrar tu dirección</p>
+        <h1>Regitro a evento</h1>
+        <p>Llene aquí los siguientes datos para registrarte al evento</p>
     </header>
 
     <main>
@@ -26,29 +26,27 @@
                 
                 <form id="nombreform">
                     <label for="nombres">Nombre completo:</label>
-                    <input type="text" name="username" placeholder="Nombre completo">
+                    <input type="text" name="username" placeholder="Nombre completo" required>
                 </form>
     
                 
                 <h2>Dirección</h2>
                 <form id="direccionform">
                     <label for="place_input">Dirección:</label>
-                    <textarea id="place_input" name="direccion" placeholder="Escribe tu dirección aquí" required></textarea>
+                    <input type="text" id="place-input" name="direccion" placeholder="Escribe tu dirección aquí" required>
                 </form>
 
-                <button class="button" id="guardarDatos" onclick="guardarInformacion()">Guardar Información</button>
-                <div id="mensajeRegistro" style="display: none;">¡Registro exitoso!</div>
+                <button class="button" id="guardardatos" onclick="guardarInformacion()">Guardar Información</button>
+                <div id="mensajeregistro" style="display: none;">¡Registro exitoso!</div>
             </div>
         </div>
 
         <div class="container">
-            <div id="map">
-            </div>
+            <div id="map"></div>
         </div>
-
-        
     </main>
+
     <script src="script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&libraries=places&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGKCwfM236J2SoyyyLQdhuecvAPO1Fg68&libraries=places&callback=initMap"></script>
 </body>
 </html>
